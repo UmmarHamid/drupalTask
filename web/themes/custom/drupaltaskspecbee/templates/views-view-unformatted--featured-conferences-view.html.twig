@@ -15,9 +15,11 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
+{{ attach_library('drupaltaskspecbee/slick-carousel') }}
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
+<div class="slider-container-c">
 {% for row in rows %}
   {%
     set row_classes = [
@@ -28,3 +30,4 @@
     {{- row.content -}}
   </div>
 {% endfor %}
+</div>

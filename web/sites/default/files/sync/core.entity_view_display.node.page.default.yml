@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
+    - field.field.node.page.field_heading
+    - field.field.node.page.field_sub_heading
     - node.type.page
   module:
-    - text
     - user
 _core:
   default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
@@ -15,14 +15,20 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  body:
+  field_heading:
+    weight: 0
     label: hidden
-    type: text_default
-    weight: 100
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
+  field_sub_heading:
+    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-  links:
-    weight: 101
+    type: basic_string
     region: content
-hidden: {  }
+hidden:
+  links: true

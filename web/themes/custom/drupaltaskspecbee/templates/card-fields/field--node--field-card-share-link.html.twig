@@ -1,0 +1,7 @@
+{% if items.0.content['#url'] is not empty %}
+  {% set file_path = file_url(items.0.content['#url'].toString()) %}
+{% endif %}
+
+<a href="{{ file_path }}" class="card-share-link card-bottom--item" target="_blank">
+  <img src="/themes/custom/drupaltaskspecbee/images/svg/share.svg" alt="download icon"/>
+</a>

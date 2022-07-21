@@ -1,13 +1,51 @@
+.quicktabs-main {
+  display: block;
+  margin: 0 30px;
+}
+
 .quicktabs-tabs {
-  color: dodgerblue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 82px;
+  border-bottom: 1px solid #017fd5;
+}
+
+.quicktabs-tabs li,
+.quicktabs-tabs a {
+  font-size: 18px;
+  line-height: 56px;
+  vertical-align: middle;
+  font-weight: 400;
+  text-decoration: none;
+  color: #017fd5;
+}
+
+.s-previous {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+}
+
+.s-next {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  z-index: 5;
+}
+
+.slick-prev:before {
+  content: url("/themes/custom/drupaltaskspecbee/images/svg/left-arrow.svg");
+  color: #9ba5ac;
+}
+
+.slick-next:before {
+  content: url("/themes/custom/drupaltaskspecbee/images/svg/right-arrow.svg");
+  color: #9ba5ac;
 }
 /*# sourceMappingURL=../../../maps/molecules/quick-tabs/quick-tabs.css.map */

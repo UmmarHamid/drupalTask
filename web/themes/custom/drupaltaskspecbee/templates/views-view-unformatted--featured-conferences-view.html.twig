@@ -16,10 +16,11 @@
  */
 #}
 {{ attach_library('drupaltaskspecbee/slick-carousel') }}
+{# <img class="s-previous" src="/themes/custom/drupaltaskspecbee/images/svg/left-arrow.svg" alt="download icon"/> #}
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
-<div class="slider-container-c">
+<div class="slider-container-custom">
 {% for row in rows %}
   {%
     set row_classes = [
@@ -27,7 +28,10 @@
     ]
   %}
   <div{{ row.attributes.addClass(row_classes) }}>
-    {{- row.content -}}
+
+      {{- row.content -}}
+
   </div>
 {% endfor %}
 </div>
+{# <img class="s-next" src="/themes/custom/drupaltaskspecbee/images/svg/right-arrow.svg" alt="download icon"/> #}

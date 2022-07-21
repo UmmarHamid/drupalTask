@@ -1,0 +1,96 @@
+.card {
+  margin-top: 36px;
+  width: 362px;
+}
+
+.card-image {
+  margin-bottom: 10px;
+}
+
+.card-image img {
+  width: 360px;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #424a55;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.card-department,
+.card-date,
+.card-location {
+  font-size: 14px;
+  line-height: 15px;
+  color: #7c8993;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-department--text,
+.card-location--text {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.card-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.card-price {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.l-30-padded {
+  padding-left: 30px;
+  margin-bottom: 16px;
+}
+
+.views-row:not(:last-of-type) {
+  margin-right: 9px;
+}
+
+.card-bottom--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #ececec;
+}
+
+.card-bottom--item {
+  padding: 12px 24px;
+}
+
+.card-bottom--item img {
+  width: 18px;
+  height: 18px;
+}
+/*# sourceMappingURL=../../../maps/molecules/card/card.css.map */

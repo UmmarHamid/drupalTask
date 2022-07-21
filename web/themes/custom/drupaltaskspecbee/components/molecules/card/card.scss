@@ -1,0 +1,72 @@
+@import '../../config.all';
+
+.card {
+  margin-top: 36px;
+  width: 362px;
+}
+.card-image {
+  margin-bottom: 10px;
+  img {
+    width: 360px;
+    height: 200px;
+    object-fit: contain;
+  }
+}
+.card-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $grey;
+  @include line-clamp(1);
+  word-break: break-all;
+}
+.card-department,
+.card-date,
+.card-location {
+  font-size: 14px;
+  line-height: 15px;
+  color: $grey-light;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+.card-department--text,
+.card-location--text {
+  @include line-clamp(1);
+  word-break: break-all;
+}
+.card-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+.card-price {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  padding: 8px;
+  border: 1px solid $white;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.l-30-padded {
+  padding-left: 30px;
+  margin-bottom: 16px;
+}
+.views-row {
+  &:not(:last-of-type) {
+    margin-right: 9px;
+  }
+}
+.card-bottom--container {
+  display: flex;
+  border-top: 1px solid $icon-grey-light;
+}
+.card-bottom--item {
+  padding: 12px 24px;
+  img {
+    width: 18px;
+    height: 18px;
+  }
+}

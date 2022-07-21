@@ -70,28 +70,15 @@
  *   in different view modes.
  */
 #}
-<article{{ attributes }}>
-
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
+{{ attach_library('drupaltaskspecbee/card') }}
+<article{{ attributes.addClass('card') }}>
   <div{{ content_attributes }}>
-    {{ content }}
+    {{ content|without('field_card_is_featured','field_card_download','field_card_share_link', 'field_card_view_details_link') }}
+    <div class="card-bottom--container">
+      {{ content.field_card_is_featured }}
+      {{ content.field_card_download }}
+      {{ content.field_card_share_link }}
+      {{ content.field_card_view_details_link }}
+    </div>
   </div>
-
 </article>

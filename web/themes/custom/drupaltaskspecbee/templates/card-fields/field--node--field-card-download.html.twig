@@ -1,0 +1,10 @@
+{% if items.0.content['#file'].uri.value is not empty %}
+  {% set file_path = file_url(items.0.content['#file'].uri.value) %}
+{% endif %}
+
+<a href="{{ file_path }}" class="card-download card-bottom--item" target="_blank">
+  <img src="/themes/custom/drupaltaskspecbee/images/svg/download.svg" alt="download icon"/>
+</a>
+
+
+

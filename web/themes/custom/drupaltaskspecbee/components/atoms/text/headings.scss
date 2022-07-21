@@ -1,0 +1,19 @@
+@import '../../config.all';
+
+.component-heading {
+  color: $grey;
+  font-size: 36px;
+  line-height: 56px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.component-subheading {
+  color: $grey-light;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 83px;
+}

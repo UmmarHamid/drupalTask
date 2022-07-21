@@ -1,13 +1,15 @@
 "use strict";
 (($) => {
     $(function ($) {
-        $('.slider-container-c').slick({
+        $('.slider-container-custom').slick({
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
             arrows: true,
+            // nextArrow: '.s-next',
+            // prevArrow: '.s-previous',
             mobileFirst: true,
-            dots: false,
+            // dots: true,
             //   responsive: [
             //     {
             //       breakpoint: 767,
@@ -17,9 +19,9 @@
         });
     });
     //TODO Improve Performance
-    $(window).on('resize', function () {
-        $('.slider-container-c').slick('resize');
-    });
+    // $(window).on('resize', function () {
+    //   $('.slider-container-custom').slick('resize');
+    // });
 })(jQuery);
 
 //# sourceMappingURL=../../../maps/molecules/slick-slider/slick-slider.js.map

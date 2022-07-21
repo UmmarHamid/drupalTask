@@ -1,0 +1,7 @@
+{% if items.0.content['#url'] is not empty %}
+  {% set file_path = file_url(items.0.content['#url'].toString()) %}
+{% endif %}
+
+<div class="card-is-featured card-bottom--item">
+  <img src="/themes/custom/drupaltaskspecbee/images/svg/favourite.svg" alt="download icon"/>
+</div>

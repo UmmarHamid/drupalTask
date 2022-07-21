@@ -22,3 +22,13 @@ slick-carousel:
     dist/components/molecules/slick-slider/slick-slider.js: {}
   dependencies:
     - core/jquery
+
+headings:
+  css:
+    theme:
+      dist/components/atoms/text/headings.css: {}
+
+card:
+  css:
+    theme:
+      dist/components/molecules/card/card.css: {}

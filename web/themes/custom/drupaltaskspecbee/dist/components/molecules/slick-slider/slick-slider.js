@@ -6,22 +6,20 @@
             slidesToShow: 3,
             slidesToScroll: 1,
             arrows: true,
-            // nextArrow: '.s-next',
-            // prevArrow: '.s-previous',
-            mobileFirst: true,
-            // dots: true,
-            //   responsive: [
-            //     {
-            //       breakpoint: 767,
-            //       settings: 'unslick',
-            //     },
-            //   ],
+            mobileFirst: false,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: false,
+                    },
+                },
+            ],
         });
     });
-    //TODO Improve Performance
-    // $(window).on('resize', function () {
-    //   $('.slider-container-custom').slick('resize');
-    // });
 })(jQuery);
 
 //# sourceMappingURL=../../../maps/molecules/slick-slider/slick-slider.js.map

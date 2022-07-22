@@ -51,7 +51,9 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass("card-price") }}>{{ item.content }}</div>
+      <div{{ attributes.addClass("card-price") }}>
+      {{ element['#object'].field_card_price.value ? item.content : "FREE" }}
+      </div>
     {% endfor %}
   {% endif %}
 {% else %}

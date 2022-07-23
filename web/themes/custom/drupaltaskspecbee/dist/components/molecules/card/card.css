@@ -1,36 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap"');
+
+main {
+  font-family: montserrat;
+}
+
 .card {
-  margin-top: 36px;
+  margin-top: 16px;
   border: 1px solid #ececec;
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 10px;
 }
 
-.card:hover {
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+@media (min-width: 768px) {
+  .card {
+    margin-top: 36px;
+  }
 }
 
-.card:hover .card-image {
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
-  -webkit-transition: -webkit-transform 0.15s;
-  transition: -webkit-transform 0.15s;
-  transition: transform 0.15s;
-  transition: transform 0.15s, -webkit-transform 0.15s;
+.card-main--container {
+  position: relative;
 }
 
-.card:hover .card-image img {
-  height: 157px;
-  -webkit-transition: height 0.15s;
-  transition: height 0.15s;
-}
+@media (min-width: 768px) {
+  .card:hover {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
 
-.card:hover .card-bottom--container {
-  opacity: 1;
-  height: auto;
-  -webkit-transition: height 0.15s;
-  transition: height 0.15s;
+  .card:hover .card-image {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    -webkit-transition: -webkit-transform 0.15s;
+    transition: -webkit-transform 0.15s;
+    transition: transform 0.15s;
+    transition: transform 0.15s, -webkit-transform 0.15s;
+  }
+
+  .card:hover .card-image img {
+    height: 157px;
+    -webkit-transition: height 0.15s;
+    transition: height 0.15s;
+  }
+
+  .card:hover .card-bottom--container {
+    opacity: 1;
+    height: auto;
+    -webkit-transition: height 0.15s;
+    transition: height 0.15s;
+  }
 }
 
 .card-image {
@@ -109,8 +127,10 @@
   margin-bottom: 16px;
 }
 
-.views-row:not(:last-of-type) {
-  margin-right: 9px;
+@media (min-width: 768px) {
+  .views-row:not(:last-of-type) {
+    margin-right: 9px;
+  }
 }
 
 .card-bottom--container {
@@ -128,6 +148,15 @@
   border-top: 1px solid #ececec;
 }
 
+@media (min-width: 0) and (max-width: 767px) {
+  .card-bottom--container {
+    -webkit-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;
+    opacity: 1;
+    height: auto;
+  }
+}
+
 .card-bottom--container > a:not(:last-of-type) {
   border-right: 1px solid #ececec;
 }
@@ -138,7 +167,7 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .card-bottom--item {
-    padding: 12px 12px;
+    padding: 12px 10px;
   }
 }
 
@@ -165,6 +194,10 @@
   font-weight: 400;
   color: #0b80ce;
   margin: 0 auto;
+}
+
+.featured-mark {
+  position: relative;
 }
 
 .featured-mark--triangle {

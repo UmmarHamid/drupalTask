@@ -1,28 +1,39 @@
 @import '../../config.all';
-
+main {
+  font-family: montserrat;
+}
 .card {
-  margin-top: 36px;
+  margin-top: 16px;
   border: 1px solid $icon-grey-light;
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 10px;
+  @include breakpoint($tablet-up) {
+    margin-top: 36px;
+  }
 }
-.card:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  .card-image {
-    transform: scale(1.04);
-    transition: transform 0.15s;
-    img {
-      height: 157px;
+.card-main--container {
+  position: relative;
+}
+@include breakpoint($tablet-up) {
+  .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    .card-image {
+      transform: scale(1.04);
+      transition: transform 0.15s;
+      img {
+        height: 157px;
+        transition: height 0.15s;
+      }
+    }
+    .card-bottom--container {
+      opacity: 1;
+      height: auto;
       transition: height 0.15s;
     }
   }
-  .card-bottom--container {
-    opacity: 1;
-    height: auto;
-    transition: height 0.15s;
-  }
 }
+
 .card-image {
   margin-bottom: 10px;
   img {
@@ -79,11 +90,18 @@
   margin-bottom: 16px;
 }
 .views-row {
-  &:not(:last-of-type) {
-    margin-right: 9px;
+  @include breakpoint($tablet-up) {
+    &:not(:last-of-type) {
+      margin-right: 9px;
+    }
   }
 }
 .card-bottom--container {
+  @include breakpoint($mobile) {
+    transition: opacity 1s ease-out;
+    opacity: 1;
+    height: auto;
+  }
   transition: opacity 1s ease-out;
   opacity: 0;
   height: 0;
@@ -98,7 +116,7 @@
 .card-bottom--item {
   padding: 12px 16px;
   @include breakpoint($tablet) {
-    padding: 12px 12px;
+    padding: 12px 10px;
   }
   @include breakpoint($desktop) {
     padding: 12px 16px;
@@ -121,6 +139,9 @@
   font-weight: 400;
   color: $arrow-blue;
   margin: 0 auto;
+}
+.featured-mark {
+  position: relative;
 }
 .featured-mark--triangle {
   width: 50px;

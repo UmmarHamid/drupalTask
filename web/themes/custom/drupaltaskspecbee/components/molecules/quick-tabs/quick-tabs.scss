@@ -25,7 +25,13 @@
     position: absolute;
     pointer-events: none;
     width: 0;
-    top: 44px;
+    top: 34px;
+    @include breakpoint($tablet) {
+      top: 26px;
+    }
+    @include breakpoint($desktop) {
+      top: 45px;
+    }
   }
   &:after {
     border-color: rgba(255, 255, 255, 0);
@@ -86,18 +92,28 @@
   }
 }
 .slick-prev {
-  left: 0;
+  left: 10px;
+  @include breakpoint($desktop) {
+    left: 0;
+  }
 }
 .slick-prev:before {
   content: url('/themes/custom/drupaltaskspecbee/images/svg/left-arrow.svg');
-  color: #9ba5ac;
+}
+.slick-prev:hover:before {
+  content: url('/themes/custom/drupaltaskspecbee/images/svg/left-arrow-hover.svg');
 }
 .slick-next {
-  right: 0;
+  right: 10px;
+  @include breakpoint($desktop) {
+    right: 0;
+  }
 }
 .slick-next:before {
   content: url('/themes/custom/drupaltaskspecbee/images/svg/right-arrow.svg');
-  color: #9ba5ac;
+}
+.slick-next:hover:before {
+  content: url('/themes/custom/drupaltaskspecbee/images/svg/right-arrow-hover.svg');
 }
 .slick-list {
   margin: 0 20px;
@@ -110,5 +126,16 @@
 }
 
 .slider-container-custom {
-  height: 400px;
+  height: 460px;
+  @include breakpoint($tablet-up) {
+    height: 400px;
+  }
+}
+@include breakpoint($mobile) {
+  .slick-dots li button::before {
+    font-size: 42px;
+  }
+  .slick-dots li.slick-active button::before {
+    color: $arrow-blue;
+  }
 }

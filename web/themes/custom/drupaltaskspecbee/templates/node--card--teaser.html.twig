@@ -89,9 +89,10 @@
             <span> Default fallback Image </span>
           </div>
       {% endif %}
-    {# {{ content.field_card_image }} #}
     {{ content|without('field_card_image','field_card_is_featured','field_card_download','field_card_share_link','field_card_price', 'field_card_view_details_link') }}
-    {{ content.field_card_price }}
+    {% if node.field_card_date.value|date('c') > now|date('c') %}
+      {{ content.field_card_price }}
+    {% endif %}
     <div class="card-bottom--container">
       {{ content.field_card_is_featured }}
       {{ content.field_card_download }}

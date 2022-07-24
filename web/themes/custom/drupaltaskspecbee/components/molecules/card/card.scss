@@ -4,6 +4,8 @@ main {
 }
 .card {
   margin-top: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
   border: 1px solid $icon-grey-light;
   border-radius: 4px;
   overflow: hidden;
@@ -22,7 +24,7 @@ main {
       transform: scale(1.04);
       transition: transform 0.15s;
       img {
-        height: 157px;
+        height: 147px;
         transition: height 0.15s;
       }
     }
@@ -45,7 +47,6 @@ main {
 .card-title {
   font-size: 18px;
   line-height: 24px;
-  font-weight: 400;
   letter-spacing: 1px;
   color: $grey;
   @include line-clamp(1);
@@ -136,7 +137,6 @@ main {
   text-align: center;
   font-size: 16px;
   letter-spacing: 1px;
-  font-weight: 400;
   color: $arrow-blue;
   margin: 0 auto;
 }
@@ -165,4 +165,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  svg {
+    margin-bottom: 8px;
+  }
 }

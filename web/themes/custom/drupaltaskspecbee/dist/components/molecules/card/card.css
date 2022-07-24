@@ -6,6 +6,8 @@ main {
 
 .card {
   margin-top: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
   border: 1px solid #ececec;
   border-radius: 4px;
   overflow: hidden;
@@ -38,7 +40,7 @@ main {
   }
 
   .card:hover .card-image img {
-    height: 157px;
+    height: 147px;
     -webkit-transition: height 0.15s;
     transition: height 0.15s;
   }
@@ -65,7 +67,6 @@ main {
 .card-title {
   font-size: 18px;
   line-height: 24px;
-  font-weight: 400;
   letter-spacing: 1px;
   color: #424a55;
   display: -webkit-box;
@@ -191,7 +192,6 @@ main {
   text-align: center;
   font-size: 16px;
   letter-spacing: 1px;
-  font-weight: 400;
   color: #0b80ce;
   margin: 0 auto;
 }
@@ -232,5 +232,9 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.fallback-item svg {
+  margin-bottom: 8px;
 }
 /*# sourceMappingURL=../../../maps/molecules/card/card.css.map */
